@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>She Can Foundation</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        background:#f8f9fa;
+        color:#333;
+    }
+
+    /* Navbar */
+    nav{
+        background:#ff4d6d;
+        padding:15px 8%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        position:sticky;
+        top:0;
+        z-index:1000;
+    }
+
+    nav h2{
+        color:white;
+    }
+
+    nav ul{
+        list-style:none;
+        display:flex;
+        gap:20px;
+    }
+
+    nav ul li a{
+        text-decoration:none;
+        color:white;
+        font-weight:bold;
+    }
+
+    /* Hero Section */
+    .hero{
+        min-height:90vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        flex-direction:column;
+        padding:20px;
+        background:linear-gradient(to right,#ff758c,#ff7eb3);
+        color:white;
+        animation:fadeIn 1.5s ease;
+    }
+
+    .hero h1{
+        font-size:3rem;
+        margin-bottom:15px;
+    }
+
+    .hero p{
+        max-width:700px;
+        font-size:1.1rem;
+        line-height:1.6;
+    }
+
+    .btn{
+        margin-top:25px;
+        background:white;
+        color:#ff4d6d;
+        padding:12px 25px;
+        border:none;
+        border-radius:30px;
+        cursor:pointer;
+        font-size:1rem;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    .btn:hover{
+        transform:scale(1.05);
+        background:#ffe5ec;
+    }
+
+    /* About Section */
+    .about{
+        padding:80px 10%;
+        text-align:center;
+    }
+
+    .about h2{
+        margin-bottom:20px;
+        color:#ff4d6d;
+    }
+
+    .about-container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:40px;
+        flex-wrap:wrap;
+        margin-top:30px;
+    }
+
+    .about img{
+        width:350px;
+        border-radius:15px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .about-text{
+        max-width:500px;
+        text-align:left;
+        line-height:1.8;
+    }
+
+    /* Impact Section */
+    .impact{
+        background:white;
+        padding:70px 10%;
+        text-align:center;
+    }
+
+    .impact h2{
+        color:#ff4d6d;
+        margin-bottom:30px;
+    }
+
+    .cards{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+        flex-wrap:wrap;
+    }
+
+    .card{
+        background:#fff;
+        padding:25px;
+        width:250px;
+        border-radius:12px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-8px);
+    }
+
+    .card h3{
+        color:#ff4d6d;
+        margin-bottom:10px;
+    }
+
+    /* Join Section */
+    .join{
+        padding:80px 10%;
+        text-align:center;
+        background:#ffe5ec;
+    }
+
+    .join h2{
+        color:#ff4d6d;
+        margin-bottom:15px;
+    }
+
+    /* Footer */
+    footer{
+        background:#333;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity:0;
+            transform:translateY(20px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    @media(max-width:768px){
+
+        .hero h1{
+            font-size:2.2rem;
+        }
+
+        nav{
+            flex-direction:column;
+            gap:10px;
+        }
+
+        .about-text{
+            text-align:center;
+        }
+
+        .about img{
+            width:100%;
+            max-width:350px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>She Can Foundation</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#join">Join Us</a></li>
+    </ul>
+</nav>
+
+<!-- Home Section -->
+<section class="hero" id="home">
+    <h1>Empowering Women, Creating Opportunities</h1>
+
+    <p>
+        She Can Foundation believes in empowering women through education,
+        skill development, leadership, and equal opportunities. Together,
+        we can create a brighter future for every woman.
+    </p>
+
+    <button class="btn" onclick="joinUs()">
+        Become a Volunteer
+    </button>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+
+    <h2>About Us</h2>
+
+    <div class="about-container">
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
+             alt="Women Empowerment">
+
+        <div class="about-text">
+            <p>
+                She Can Foundation is dedicated to supporting women and
+                young girls by providing access to education, mentorship,
+                career guidance, and community support.
+            </p>
+
+            <br>
+
+            <p>
+                Our mission is to inspire confidence, encourage leadership,
+                and create opportunities that help women achieve their full
+                potential.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="impact">
+
+    <h2>Our Impact</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Education</h3>
+            <p>Providing learning opportunities and mentorship programs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Skill Development</h3>
+            <p>Helping women gain practical skills for employment.</p>
+        </div>
+
+        <div class="card">
+            <h3>Community Support</h3>
+            <p>Building a strong network of support and encouragement.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Join Section -->
+<section class="join" id="join">
+
+    <h2>Join Our Mission</h2>
+
+    <p>
+        Become a volunteer and help us create a positive impact in society.
+    </p>
+
+    <button class="btn" onclick="joinUs()">
+        Join Us Today
+    </button>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 She Can Foundation | Together We Empower</p>
+</footer>
+
+<script>
+
+function joinUs(){
+    alert("Thank you for your interest! We will contact you soon.");
+}
+
+</script>
+
+</body>
+</html>
